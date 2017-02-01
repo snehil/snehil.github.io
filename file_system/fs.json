@@ -1,0 +1,38 @@
+{
+   "name": "~",
+   "type": "dir",
+   "contents": [
+      {
+         "name": "resume",
+         "type": "url",
+         "contents": "https://github.com/snehil/snehil.github.io",
+         "desc": "Snehil's Resume"
+      },
+      {
+         "name": "papers",
+         "type": "dir",
+         "contents": [
+            {
+               "name": "MS_Scholarly_Paper",
+               "type": "url",
+               "contents": "https://github.com/snehil/MS-Content/blob/master/Snehil_MS_Scholarly_paper_SP13_McEleice_and_Niederreiter_Cryptosystems.pdf",
+               "desc": "Study Of McEliece & Niederreiter Cryptosystems"
+            },
+            {
+               "name": "foo",
+               "type": "dir",
+               "contents": [
+                  {
+                     "name": "MS_Crypt_Research_Paper",
+                     "type": "url",
+                     "contents": "https://github.com/snehil/MS-Content/blob/master/Snehil_ECE646_paper_Implementation_Of_A_Secure_Distributed_Storage_System.pdf",
+                     "desc": "Implementation Of A Secure Distributed Storage System"
+                  }
+               ]
+            }
+         ],
+         "desc": "MS Research Papers"
+      }
+   ],
+   "desc": "Root Directory"
+}
