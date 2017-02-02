@@ -629,8 +629,6 @@
 				const children       = this.term.fs.getChildren(this.getCurDirName());
 				const userEnteredTxt = this.userCommand.split(' ');
 
-				console.log('userEnteredTxt: ' + userEnteredTxt);
-
 				if (userEnteredTxt.length > 2) {
 					return;
 				}
@@ -667,15 +665,12 @@
 						return;
 			    	}
 
-			    	console.log('userEnteredDirName:  '+ userEnteredDirName);
-
 			    	this.term.displayMsg(`Invalid Directory.`, 'invDir', this.term.$root.find('prompt:last'));
 			    }
 			}));
 		}
 
 		executeTabCommand(childNames) {
-			console.log(childNames);
 			if ($.isArray(childNames) && childNames.length > 1) {
 				// Display options
 				let tabOpts = '';
@@ -683,8 +678,6 @@
 				for (const childName of childNames) {
 					tabOpts += `${childName} 		`;
 				}
-
-			    console.log('this.userCommand: ' + this.userCommand);
 
 				this.term.displayMsg(tabOpts, 'tabOpts', this.term.$root.find('prompt:last'));
 				this.term.showNewPromptWithMsg(this.userCommand);
@@ -758,7 +751,6 @@
 	    		if (child && child.name && child.name.includes(txtFromUsrCmd)) {
 
 		    		const lastChar = child.name[child.name.length -1];
-		    		console.log('child.name1: ' + child.name);
 
 		    		if (lastChar === '/') {
 		    			child.name = child.name.slice(0,-1);
