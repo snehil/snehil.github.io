@@ -34,7 +34,7 @@
 			if (!user) {
 				this.displayMsg('Invalid user name entered.', 'InvalidUsrMsg', 'js_bash_console');
 				return;
-			}
+			} 
 
 			if (!pwd) {
 				this.displayMsg('Invalid password entered.', 'InvalidPwdMsg', 'js_bash_console');
