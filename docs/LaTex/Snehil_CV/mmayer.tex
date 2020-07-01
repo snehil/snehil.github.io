@@ -1,0 +1,232 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.3, 10 May 2020) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 and academicon fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{RoyalBlue}{HTML}{2c80b2}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+% \colorlet{name}{black}
+\colorlet{tagline}{RoyalBlue}
+\colorlet{heading}{RoyalBlue}
+\colorlet{headingrule}{RoyalBlue}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{RoyalBlue}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Snehil Wakchaure}
+\tagline{Software Engineer |  Data Enthusiast}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%% You can add multiple photos on the left or right
+% \photoR{2.5cm}{flowcode (1)}
+% \photoL{2cm}{Yacht_High,Suitcase_High}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{snehil.w@gmail.com}
+%   \phone{000-00-0000}
+  \phone{(703) 220 8882}
+  \github{snehil.github.io}
+  \linkedin{snehil.wakchaure}
+%   \github{github.com/mmayer} % I'm just making this up though.
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+  % \orcid{0000-0000-0000-0000}
+  %% You can add your own arbtrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+}
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Inventions/Patents}
+
+\cvevent{}{}{2019 \emph{-- Patent pending}}{}
+\begin{itemize}
+\item A Big-Data platform to perform process mining on patient medical records  
+\end{itemize}
+
+\cvsection{Experience}
+
+\cvevent{Associate Lead Software Engineer}{Cerner}{April 2019 -- Ongoing}{Kansas City, KS}\emph{Insights R\&D -- Innovations Dev. team}
+\begin{itemize}
+\item Project lead to design and build a patented petabyte scale Process Intelligence platform from scratch (AWS, Hadoop)
+\item Goals: Improve clinical workflows/patient safety, define/catalogue clinical processes, establish global benchmarks
+\end{itemize}
+
+\divider
+
+\cvevent{}{}{October 2015 – March 2019}{Kansas City, KS}\emph{Strategy \& Analytics team}
+\begin{itemize}
+\item Saved 14.3 FTE hrs/year by building a scalable, real-time, RESTful ticket management full-stack portal in NodeJS
+\item Built POCs to reduce latency by 30mins (Kafka, Azure). Built AI models for video anomaly detection, ticket triage
+\item Led adoption of AWS cloud, ES6 standards, GraphDB, ELK based user tracking, regular code reviews
+\end{itemize}
+
+\divider
+
+\cvevent{}{}{Jun 2013 - Oct 2015}{Kansas City, KS}\emph{Nursing Integration Services team}
+\begin{itemize}
+\item Performed detailed RCA, coded Java packages, handled escalations 24x7 while meeting all KPI’s/metrics
+\item Drove code investigations, logged Change Requests, enhancements, design changes with IP teams \& clients
+\end{itemize}
+
+\divider
+
+\cvevent{Lead Graduate Teaching Assistant}{George Mason University}{August 2011 - May 2013}{Fairfax, VA}\emph{Nursing Integration Services team}
+\begin{itemize}
+\item Managed all GTA activities, helped the ECE dept. secure ABET accreditation, taught Matlab, set/graded quizzes
+\end{itemize}
+
+\divider
+
+\cvevent{Trainee Service Supervisor}{Weatherford OTME Ltd.}{July 2008 - May 2010}{Mumbai, India}\emph{Nursing Integration Services team}
+\begin{itemize}
+\item Provided Supervision, maintenance, support \& end-to-end field engineering services for very high-stake projects
+\item Executed MWD/Thru-Tubing field services in a fast-paced, high-risk onshore environment for Oil \& Gas clients
+\end{itemize}
+
+
+
+\newpage
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Certifications}
+\cvevent{}{}{2017 -- Present}{}
+\begin{itemize}
+\item AWS Certified Solutions Architect – Associate                           
+\end{itemize}
+
+
+\cvsection{Technical Skills}
+
+\begin{itemize}
+\item \textcolor{emphasis}{Programming Languages} 
+\end{itemize}
+\cvtag{Java 8}\cvtag{Javascript (ES6)}\cvtag{Python}\cvtag{R}
+
+\vskip 0.2cm
+
+\begin{itemize}
+\item \textcolor{emphasis}{Web Development} 
+\end{itemize}
+\cvtag{Node.js}\cvtag{Web-Sockets}\cvtag{Knockout.js}
+
+\vskip 0.2cm
+
+\begin{itemize}
+\item \textcolor{emphasis}{Databases} 
+\end{itemize}
+\cvtag{Hive}\cvtag{Oracle}\cvtag{MySQL}\cvtag{Redis}\cvtag{NoSQL}
+
+% \vskip 0.2cm
+
+\begin{itemize}
+\item \textcolor{emphasis}{Big Data/Cloud} 
+\end{itemize}
+\cvtag{Hadoop}\cvtag{Oozie}\cvtag{Crunch}\cvtag{Amazon AWS}
+
+% \vskip 0.2cm
+
+\begin{itemize}
+\item \textcolor{emphasis}{Dev-Ops/Data Science} 
+\end{itemize}
+\cvtag{Docker}\cvtag{Cloudformation}\cvtag{SKLearn/Keras}
+
+\cvsection{Achievements}
+
+\cvachievement{\faUserGraduate}{Managerial Leadership Program}{200 of 2526 applicants selected:2020}
+\cvachievement{\faAward}{Distinguished employee, Cerner}{top 3\% of 30,000 employees:2019}
+\cvachievement{\faMedal}{Excellence Award, Cerner}{For exceptional teamwork:2017}
+\cvachievement{\faUserGraduate}{Architect Leadership Program, Cerner}{100 of 2000 applicants selected;2018}
+\cvachievement{\faMedal}{3 Above \& Beyond Awards, Cerner}{For User Experience:2014 to 2017}
+\cvachievement{\faCode}{ShipIt Hackathon Winner}{2nd place, Cerner:2018}
+\cvachievement{\faMedal}{Client Satisfaction Awards, Cerner}{For excellent client service:2014-2015}
+\cvachievement{\faTrophy}{ECE Dept. Graduate Fellowship Award}{Awarded by Chairman, GMU, VA, 2013}
+% \cvachievement{\faTrophy}{Above & Beyond Awards -- 3 Awards, Cerner}{Multiple projects from 2014 to 2017}
+
+
+\cvsection{Education}
+\cvevent{M.S.\ in Computer Engineering}{George Mason University}{May 2013}{VA, USA}
+
+\divider
+
+\cvevent{B.E.\ in Electronics \& Telecom.}{University Of Mumbai}{May 2007}{Mumbai, India}
+
+
+\end{document}
