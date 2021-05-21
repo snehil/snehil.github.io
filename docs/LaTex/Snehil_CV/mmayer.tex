@@ -57,6 +57,10 @@
 \colorlet{emphasis}{SlateGrey}
 \colorlet{body}{LightGrey}
 
+\usepackage{color}
+\definecolor{light}{rgb}{0.5, 0.5, 0.5}
+\def\light#1{{\color{light}#1}}
+
 % Change some fonts, if necessary
 % \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
 % \renewcommand{\personalinfofont}{\footnotesize}
@@ -120,7 +124,7 @@
 
 \cvsection{Experience}
 
-\cvevent{Lead Software Engineer \emph{(L4)}}{Cerner}{April 2019 -- Ongoing}{Kansas City, KS}\emph{Insights R\&D -- Innovations Dev. team}
+\cvevent{Lead Software Engineer \emph{\light{(L4)}}}{Cerner}{April 2019 -- Ongoing}{Kansas City, KS}\emph{Insights R\&D -- Innovations Dev. team}
 \begin{itemize}
 \item Technical lead to design/build a patented Big Data Healthcare Process Intelligence framework from scratch (AWS, CDH \& Hadoop)
 \end{itemize}
